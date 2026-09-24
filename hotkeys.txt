@@ -1,0 +1,42 @@
+window management
+
+esc; normal; normal
+ctrl h; normal; focus left split
+ctrl l; normal; focus right split
+ctrl j; normal; focus lower split
+ctrl k; normal; focus upper split
+
+clipboard
+
+ctrl c; visual; copy
+ctrl x; visual; cut
+ctrl v; insert; paste
+
+terminal
+
+leader t; normal; toggle terminal
+esc esc ; terminal; exit terminal
+
+search 
+leader s f; normal; search files from current directory
+leader s g; normal; live grep
+leader s h; normaml; serach nvim help docleader
+leader space leader; normal; list and switch currently open buffers
+
+diagnostic
+g d; normal; symbol definitiong
+g D; normal; symbol declaration
+g r; normal; list symbol references under cursor
+g l normal; goto symbol interpretation
+k; normal; show hover doc
+leader c r; normal; rename a variable across whole project
+leader c a; normal; apply available code actions or fixes
+[ d; normal; jump to previous error 
+] d; normal; jump to next error
+
+
+
+
+
+
+
