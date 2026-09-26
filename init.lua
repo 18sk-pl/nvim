@@ -208,7 +208,7 @@ require('lazy').setup({
       }
 
     require('mason').setup()
-    require('mason-tool-installer').setup { ensure_installed = { 'lua_ls' } }
+    require('mason-tool-installer').setup { ensure_installed = { 'lua_ls', 'verible' } }
 
 
 
