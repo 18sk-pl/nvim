@@ -34,7 +34,7 @@ vim.o.clipboard = 'unnamedplus'
 local map = vim.keymap.set
 
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
+map('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer', silent = true })
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Focus left window' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'Focus right window' })
 map('n', '<C-j>', '<C-w><C-j>', { desc = 'Focus lower window' })
@@ -120,7 +120,7 @@ require('lazy').setup({
   {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
-    branch = '0.1.x',
+    branch = 'master',
     dependencies = {
       'nvim-lua/plenary.nvim',
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = function() return vim.fn.executable 'make' == 1 end },
@@ -137,7 +137,7 @@ require('lazy').setup({
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs',
+    main = 'nvim-treesitter',
     opts = {
       ensure_installed = { 'c', 'cpp', 'asm', 'lua', 'vim', 'vimdoc', 'bash', 'markdown' },
       auto_install = true,
@@ -222,5 +222,23 @@ require('lazy').setup({
         },
       }
     end,
+    {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function ()
+      require("neo-tree").setup({
+        close_if_last_window = true,
+        window = {
+          position = "left",
+          width = 30,
+        },
+      })
+    end,
+  },
   },
 })
