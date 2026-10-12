@@ -22,7 +22,7 @@ leader s f; normal; search files from current directory
 leader s g; normal; live grep
 leader s h; normaml; serach nvim help docleader
 leader space leader; normal; list and switch currently open buffers
-
+leader e; tree
 diagnostic
 g d; normal; symbol definitiong
 g D; normal; symbol declaration
@@ -31,7 +31,7 @@ g l normal; goto symbol interpretation
 k; normal; show hover doc
 leader c r; normal; rename a variable across whole project
 leader c a; normal; apply available code actions or fixes
-[ d; normal; jump to previous error 
+[ d; normal; jump to previous error
 ] d; normal; jump to next error
 
 
